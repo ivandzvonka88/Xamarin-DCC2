@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DirectCareConnect</AssemblyName>
+    <RootNamespace>DirectCareConnect</RootNamespace>
+    <Configurations>Debug;Release;DebugDevice;DebugWeb</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\LoginService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazorMobile" Version="3.2.8.14" />
+    <PackageReference Include="BlazorMobile.Web" Version="3.2.8.14" />
+    <PackageReference Include="EmbedIO" Version="2.2.9" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Plugin.FilePicker" Version="2.1.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DirectCareConnect.Blazor.Common\DirectCareConnect.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Package\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\DirectCareConnect.Blazor\bin\DirectCareConnect.Blazor.zip" Link="Package\DirectCareConnect.Blazor.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SendBird">
+      <HintPath>..\ThirdPartyRefs\SendBird-SDK-dotNET-master\SendBird-SDK-dotNET-master\SendBird.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\ThirdPartyRefs\SendBird-SDK-dotNET-master\SendBird-SDK-dotNET-master\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+</Project>

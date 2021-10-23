@@ -1,0 +1,42 @@
+﻿@inherits LoginBase
+@page "/login"
+@using DirectCareConnect.Blazor.Components
+@using DirectCareConnect.Blazor.Components.Buttons
+
+
+<div class="panel panel-login">
+    <div class="panel-heading">
+        <span class="go-back">
+            <span class="sr-only">Go Back</span>
+            <img src="/images/icon-chevron-left.png" />
+        </span>
+
+        <div class="header-primary">Sign In</div>
+
+    </div>
+    <div class="panel-body text-center">
+        <div>@message</div>
+        <EditForm Model="@model" OnValidSubmit="TryLogin" class="panel-form">
+            <div class="form-group">
+                <label for="email" class="control-label sr-only">Username</label>
+                <EnhancedInputText id="identifier" @bind-Value="@model.Email" class="form-control" placeholder="Email" name="email" />
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label sr-only">Password</label>
+                <EnhancedInputText id="identifier" @bind-Value="@model.Password" class="form-control" placeholder="Password" type="password" />
+            </div>
+            <div class="form-group">
+                <SpinningButton ButtonType="submit" ButtonClass="btn btn-default" Disabled="model.ButtonDisabled" Loading="@(this.IsLoading("Login"))" ButtonText="Sign-In" ></SpinningButton>
+            </div>
+            <NavLink class="nav-link forgot-password" href="forgotpassword">Forgot Password?</NavLink>
+            @if (model.CredentialsInvalid)
+            {
+                <div class="alert alert-danger">Invalid Credentials</div>
+            }
+            <div class="copyright">&copy; 2020 Therapy4kidz, LLC</div>
+        </EditForm>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <RootNamespace>DirectCareConnect.Blazor</RootNamespace>
+    <AssemblyName>DirectCareConnect.Blazor</AssemblyName>
+    <Configurations>Debug;Release;DebugDevice;DebugWeb</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDevice|AnyCPU'">
+    <DefineConstants>TRACE;DebugWeb</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWeb|AnyCPU'">
+    <DefineConstants>TRACE;DebugWeb</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mocks\MockLoginService.cs" />
+    <Compile Remove="Startup.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="Pages\Test.razor" />
+    <Content Remove="server_index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\default.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <BlazorLinkerDescriptor Include="linker.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="server_index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.Toast" Version="3.1.2" />
+    <PackageReference Include="BlazorMobile.Build" Version="3.2.8.14" />
+    <PackageReference Include="BlazorMobile.Web" Version="3.2.8.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Build" Version="3.2.0" PrivateAssets="all" />
+	  <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="3.2.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="3.1.2" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.4" />
+        <PackageReference Include="Microsoft.NET.Sdk.Razor" Version="3.1.10" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+        <PackageReference Include="System.Net.Http.Json" Version="3.2.0-preview5.20210.3" />
+
+   
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DirectCareConnect.Blazor.Common\DirectCareConnect.Common.csproj" />
+  </ItemGroup>
+
+</Project>

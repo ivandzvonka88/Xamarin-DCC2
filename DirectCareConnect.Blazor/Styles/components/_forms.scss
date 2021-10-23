@@ -1,0 +1,16 @@
+﻿.btn-primary {
+    color: #fff;
+    background-color: #5E91B1;
+    border-color: #5E91B1;
+    width: 80%;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #5E91B1;
+    border-color: #5E91B1;
+}
+
+.btn.disabled, .btn:disabled {
+    opacity: .65;
+}

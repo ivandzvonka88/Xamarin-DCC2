@@ -1,0 +1,36 @@
+﻿@inherits CalendarBase
+@page "/calendar"
+@using DirectCareConnect.Blazor.Components.Buttons
+
+<div id="calendar" class="panel panel-secondary">
+    <div class="panel-heading">
+        <GoBackComponent HeaderText="Calendar" OnGoBack="GoBack"></GoBackComponent>
+    </div>
+
+    <div class="panel-body p-3">
+        <div class="row">
+            <div class="col-sm-12 d-flex justify-content-center align-items-center text-center">
+                <SpinningButton ButtonType="button" ButtonClass="btn btn-primary mr-2" Loading="@(this.IsLoading(nameof(MoveLastWeek)))" ButtonText="<<" OnClick="MoveLastWeek"></SpinningButton>
+                For the week of:<br />@Model.StartDate.ToShortDateString()&nbsp;&ndash;&nbsp;@Model.EndDate.ToShortDateString()
+                <SpinningButton ButtonType="button" ButtonClass="btn btn-primary ml-2" Loading="@(this.IsLoading(nameof(MoveNextWeek)))" ButtonText=">>" OnClick="MoveNextWeek"></SpinningButton>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <hr class="mt-3 mb-2"style="border:0;border-top:1px solid #e4e4e4;"/>
+                @if (Model.Events != null)
+                {
+                    foreach (var evt in Model.Events.OrderBy(p=>p.start_date))
+                    {
+                        <div class="event mb-2 pb-2" style="border-bottom: 1px solid #e4e4e4;">
+                            <div style="font-weight: 800">@evt.ClientFullName</div>
+                            <div>@evt.start_date&nbsp;&mdash;&nbsp;@evt.end_date</div>
+                        </div>
+                   
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</div>

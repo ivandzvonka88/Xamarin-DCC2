@@ -1,0 +1,24 @@
+﻿@using DirectCareConnect.Blazor.Pages.Testing
+@using DirectCareConnect.Blazor.Components
+@inherits TestingBase
+@page "/testing"
+
+<h1>Testing</h1>
+<EditForm Model="@model" OnValidSubmit="EnterLocation" class="mt-5">
+    <div class="form-group">
+        <EnhancedInputText id="identifier" @bind-Value="@model.Latitude" class="form-control" />
+        <label for="Longitude">Latitude</label>
+    </div>
+    <div class="form-group">
+        <EnhancedInputText id="identifier" @bind-Value="@model.Longitude" class="form-control" />
+        <label for="Longitude">Longitude</label>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-default"><span class="spinner-grow spinner-grow-sm" role="status">Enter Location</span></button>
+
+    </div>
+</EditForm>
+<br />
+After setting location, you will be redirected back to the dashboard page.
+If you are testing the "enter geo-fence pop-up".  Please click the Start Session button on the dashboard

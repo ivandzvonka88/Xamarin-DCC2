@@ -1,0 +1,25 @@
+﻿//it should ONLY contain the imports for the above files.
+
+@import "components/base";
+
+
+
+// Partials
+//@import "partials/reset";
+@import "components/typography";
+@import "components/buttons";
+@import "components/forms";
+@import "components/cards";
+@import "components/slider";
+// ...
+
+
+@import "global/all";
+
+
+// Third-party
+//@import "vendor/colorpicker";
+//@import "vendor/jquery.ui.core";
+
+
+

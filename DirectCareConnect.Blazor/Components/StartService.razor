@@ -1,0 +1,155 @@
+﻿@inherits DirectCareConnect.Blazor.Components.StartServiceBase
+
+<div class="text-center">
+    <img src="/images/icon-ios-pin.png" />
+</div>
+
+<h3>Start Service</h3>
+
+
+
+@if (Model == null || Model.AvailableServices == null || Model.AvailalbleClients == null)
+{
+    <div class="alert-danger text-center">Something went wrong.</div>
+    return;
+}
+
+
+
+
+@switch (Model.CurrentScreen)
+{
+    case DirectCareConnect.Common.ComponentModel.StartServiceModel.WizardScreen.Location:
+        {
+            var locationsGrouped = Model.AvailableLocations.GroupBy(p => new { p.ClientLocationId, p.LocationTypeId });
+            var locationsInGeoFence = locationsGrouped.Count();
+
+            if (locationsInGeoFence == 0)
+            {
+                <p>Location not recognized.</p>
+                <button class="btn btn-default mb-3" @onclick="() => SetLocation()">Start session here?</button>
+            }
+
+            else if (locationsInGeoFence == 1)
+            {
+                <button class="btn btn-default mb-3" @onclick="() => SetLocation(Model.AvailableLocations.Where(p => p.IsInGeofence).First())">Start session at @Model.AvailableLocations.Where(p => p.IsInGeofence).First().Address</button>
+            }
+
+            else if (locationsInGeoFence > 1)
+            {
+                foreach (var locationGroup in locationsGrouped)
+                {
+                    var location = Model.AvailableLocations.Where(p => p.ClientLocationId == locationGroup.Key.ClientLocationId && p.LocationTypeId == locationGroup.Key.LocationTypeId).First();
+
+                    <button class="btn btn-default mb-3" type="button" @onclick="() => SetLocation(location)">Start Session at @location.Address</button>
+
+                }
+
+            }
+
+
+            <button type="button" class="btn btn-primary mb-3" @onclick="@Cancel">
+                <span>Cancel</span>
+            </button>
+
+
+            break;
+
+        }
+    case Common.ComponentModel.StartServiceModel.WizardScreen.Service:
+        {
+            var servicesGrouped = Model.AvailableServices.GroupBy(p => new { p.ServiceId, p.ServiceName });
+            if (Model.SelectedLocation != null)
+            {
+                <p>Starting session at @Model.SelectedLocation.Address</p>
+            }
+            else
+            {
+                <p>Starting session at present location</p>
+            }
+            foreach (var serviceGrouped in servicesGrouped)
+            {
+                var service = Model.AvailableServices.Where(p => p.ServiceId == serviceGrouped.Key.ServiceId).First();
+<button class="btn btn-default btn-square btn-noborder d-flex mb-3" type="button" @onclick="() => SetService(service)">
+    Start @service.ServiceName <img src="/images/icon-plus-square.png" />
+</button>
+                @*<button class="btn btn-primary" @onclick="() => SetService(service)">Start @service.ServiceName</button>*@
+
+            }
+
+
+            <button type="button" class="btn btn-primary mb-3" @onclick="() => Model.CurrentScreen=DirectCareConnect.Common.ComponentModel.StartServiceModel.WizardScreen.Location">
+                <span>Cancel</span>
+            </button>
+
+
+            break;
+        }
+    case Common.ComponentModel.StartServiceModel.WizardScreen.Person:
+        {
+            var clientIdsWithSelectedService = Model.AvailableServices.Where(p => p.ServiceId == Model.SelectedService.ServiceId).Select(p => p.ClientId);
+
+
+            if (Model.SelectedLocation != null)
+            {
+                <p class="text-center">Starting Session at @Model.SelectedLocation.Address</p>
+            }
+            else
+            {
+                <p class="text-center">Starting session at present location</p>
+            }
+            if (Model.SelectedService != null)
+            {
+                <p class="text-left">Starting @Model.SelectedService.ServiceName for:</p>
+            }
+
+            var showMore = false;
+
+            foreach (var client in Model.AvailalbleClients.Where(p => clientIdsWithSelectedService.Contains(p.ClientId)).OrderByDescending(p => p.IsInGeofence))
+            {
+
+                if (client.IsInGeofence || Model.ShowAllClients)
+                {
+                    <div class="form-group text-left">
+                        <label class="checkbox-container">
+                            @client.FirstName @client.LastName
+                            <input type="checkbox" @bind="@client.Checked" />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                }
+                else
+                {
+                    showMore = true;
+                }
+
+
+
+            }
+            if (showMore)
+            {
+
+                <button type="button" class="btn btn-primary mb-3" @onclick="@ShowAllClients">
+                    <span>Show other clients</span>
+                </button>
+
+            }
+
+            <button type="button" class="btn btn-default mb-3" @onclick="() => StartServiceSegment()">
+                <span>Start session</span>
+            </button>
+
+
+
+            <button type="button" class="btn btn-primary mb-3" @onclick="() => Model.CurrentScreen=DirectCareConnect.Common.ComponentModel.StartServiceModel.WizardScreen.Service">
+                <span>Cancel</span>
+            </button>
+
+            break;
+        }
+}
+
+@{
+    return;
+}
+

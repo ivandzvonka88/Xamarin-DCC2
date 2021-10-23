@@ -1,0 +1,51 @@
+﻿@inherits EndSessionAttendantCareBase
+@page "/endsessionattendantcare/{ClientId:int}/{ClientServiceId:int}/{RemoteDocumentId:int}/{InternalDocId:int}"
+@using DirectCareConnect.Blazor.Components.Buttons
+@using DirectCareConnect.Blazor.Components.Notes
+
+<div id="documentHabilitationSession" class="panel panel-secondary">
+    <GoBackComponent HeaderText="Document Session" OnGoBack="GoBack"></GoBackComponent>
+
+    <div class="panel-body p-3">
+        <NotesTitleComponent EndSessionModel="Model"></NotesTitleComponent>
+        <NotesComponent EndSessionModel="Model" OnInputReceived="InputReceived"></NotesComponent>
+        @if (Model.CareAreas != null)
+        {
+            foreach (var careArea in Model.CareAreas)
+            {
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div style="padding: 5px; border: 1px solid #c0c0c0; margin-bottom: 10px;">
+                            <b>Care Area</b>
+                            <div style="text-indent:20px">
+                                @careArea.careArea
+                            </div>
+                            <div class="scoringItem">
+                                <input type="hidden" class="goalId" value="1">
+                                <div class="form-group">
+                                    <label for="score"><b>Score:</b></label>
+                                    <select class="score form-control form-control-sm"   @bind="careArea.score">
+                                        <option value="">Select Score</option>
+
+                                        @foreach (var score in Model.Scoring)
+                                        {
+                                            <option value="@score.value">@score.name</option>
+
+                                        }
+                                    </select>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            }
+        }
+
+        <NoteResolutionComponent EndSessionModel="Model" OnGoBack="GoBack" OnSave="Save" OnSubmit="Submit" OnInputReceived="InputReceived"></NoteResolutionComponent>
+
+    </div>
+</div>
+

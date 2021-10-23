@@ -1,0 +1,78 @@
+﻿@inherits DirectCareConnect.Blazor.Components.Notes.NoteResolutionComponentBase
+@using DirectCareConnect.Common.Constants
+@using DirectCareConnect.Common.Extensions
+@using DirectCareConnect.Blazor.Components.Buttons
+<div class="row">
+    <div class="col-sm-12">
+
+
+        @if (EndSessionModel.IsDesigneeLocked)
+
+        {
+            <div class="form-group">
+                <label for=""><b>Verification:</b></label>
+                <div>Designee has signed.</div>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                <label for="Resolution"><b>Verification:</b></label>
+                <select @bind="EndSessionModel.Resolution" class="form-control form-control-sm">
+                    @foreach (NoteResolution resolution in (NoteResolution[])Enum.GetValues(typeof(NoteResolution)))
+                    {
+                        <option value="@resolution">@resolution.GetDescription()</option>
+                    }
+                </select>
+            </div>
+
+            @if (EndSessionModel.Resolution == NoteResolution.DesigneeSign)
+            {
+                if (EndSessionModel.Designees != null)
+                {
+                    <div class="form-group">
+                        <label for="Designees"><b>Designees:</b></label>
+                        <select @bind="EndSessionModel.SelectedDesignee" class="form-control form-control-sm">
+                            @foreach (var designee in EndSessionModel.Designees)
+                            {
+                                <option value="@designee.UniqueDesigneeId">@designee.FirstName @designee.LastName</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="DesigneePin"><b>Pass Code:</b></label>
+                        <input class="form-control form-control-sm" type="text" @bind="EndSessionModel.DesigneePin" @onkeyup="@InputReceived" />
+                    </div>
+                }
+                else
+                {
+                    <div class="form-group">
+                        <div class="error-message">No designees are set up.</div>
+                    </div>
+                }
+            }
+        }
+    </div>
+</div>
+
+
+@if (EndSessionModel.HasErrors)
+{
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="error-message">
+                @EndSessionModel.ErrorMessage
+            </div>
+
+        </div>
+    </div>
+}
+
+<div class="modal-footer">
+
+    <SpinningButton ButtonType="button" ButtonClass="btn btn-default" Loading="@(EndSessionModel.IsLoading(nameof(Save)))" ButtonText="Save Note" OnClick="Save" Disabled="@(EndSessionModel.IsSaved)"></SpinningButton>
+    <SpinningButton ButtonType="button" ButtonClass="btn btn-default" Loading="@(EndSessionModel.IsLoading(nameof(Submit)))" ButtonText="Submit Note" OnClick="Submit" Disabled="@(!EndSessionModel.IsValid)"></SpinningButton>
+    <button type="button" class="btn btn-primary" @onclick="GoBack">Close</button>
+
+
+</div>

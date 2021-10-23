@@ -1,0 +1,13 @@
+﻿@inherits DirectCareConnect.Blazor.Components.Buttons.SpinningButtonBase
+<button type="@this.ButtonType" class="@this.ButtonClass" disabled="@this.Disabled" @onclick="OnClickInternal">
+    @if (!this.Loading)
+    {
+        <span>@this.ButtonText</span>
+    }
+    else
+    {
+        <img src="/images/icon-sync.png" />
+       
+    }
+
+</button>

@@ -1,0 +1,126 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using CoreLocation;
+using DirectCareConnect.Common.GeoFence;
+using DirectCareConnect.Common.Handlers;
+using DirectCareConnect.Common.Interfaces;
+using DirectCareConnect.Common.XPlat;
+using Foundation;
+using UIKit;
+
+namespace DirectCareConnect.iOS.Location
+{
+    public class LocationManager
+    {
+        protected CLLocationManager locMgr;
+        // event for the location changing
+        public event EventHandler<LocationUpdatedEventArgs> LocationUpdated = delegate { };
+
+        public LocationManager()
+        {
+            this.locMgr = new CLLocationManager();
+
+            this.locMgr.PausesLocationUpdatesAutomatically = false;
+
+            // iOS 8 has additional permissions requirements
+            if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+            {
+                locMgr.RequestAlwaysAuthorization(); // works in background
+                                                     //locMgr.RequestWhenInUseAuthorization (); // only in foreground
+            }
+
+            if (UIDevice.CurrentDevice.CheckSystemVersion(9, 0))
+            {
+                locMgr.AllowsBackgroundLocationUpdates = true;
+            }
+            LocationUpdated += PrintLocation;
+        }
+
+        // create a location manager to get system location updates to the application
+        public CLLocationManager LocMgr
+        {
+            get { return this.locMgr; }
+        }
+
+
+        public void StartLocationUpdates()
+        {
+            // We need the user's permission for our app to use the GPS in iOS. This is done either by the user accepting
+            // the popover when the app is first launched, or by changing the permissions for the app in Settings
+
+            if (CLLocationManager.LocationServicesEnabled)
+            {
+
+                LocMgr.DesiredAccuracy = 1; // sets the accuracy that we want in meters
+
+                // Location updates are handled differently pre-iOS 6. If we want to support older versions of iOS,
+                // we want to do perform this check and let our LocationManager know how to handle location updates.
+
+                if (UIDevice.CurrentDevice.CheckSystemVersion(6, 0))
+                {
+
+                    LocMgr.LocationsUpdated += async(object sender, CLLocationsUpdatedEventArgs e) => {
+                        // fire our custom Location Updated event
+                        CLLocation location = e.Locations[e.Locations.Length - 1];
+
+                        await LocationChangeHandler.GetLocationChangeHandler(Xamarin.Forms.DependencyService.Get<IJobService>(), Xamarin.Forms.DependencyService.Get<ILoggingService>()).UpdateLocation(
+                            new Common.Models.Db.Handlers.CurrentLocation
+                            {
+                                Accuracy = Convert.ToSingle(location.HorizontalAccuracy),
+                                Altitude = 0,
+                                Bearing = Convert.ToSingle(location.Course),
+                                Latitude = location.Coordinate.Latitude,
+                                Longitude = location.Coordinate.Longitude,
+                                Mocked = false,
+                                Speed = Convert.ToSingle(location.Speed)
+                            }
+                            );
+
+                        
+                    };
+
+                }
+                else
+                {
+
+                    // this won't be called on iOS 6 (deprecated). We will get a warning here when we build.
+                    LocMgr.UpdatedLocation += (object sender, CLLocationUpdatedEventArgs e) => {
+                        this.LocationUpdated(this, new LocationUpdatedEventArgs(e.NewLocation));
+                    };
+                }
+
+                // Start our location updates
+                LocMgr.StartUpdatingLocation();
+
+                // Get some output from our manager in case of failure
+                LocMgr.Failed += (object sender, NSErrorEventArgs e) => {
+                    Console.WriteLine(e.Error);
+                };
+
+            }
+            else
+            {
+
+                //Let the user know that they need to enable LocationServices
+                Console.WriteLine("Location services not enabled, please enable this in your Settings");
+
+            }
+        }
+
+        //This will keep going in the background and the foreground
+        public void PrintLocation(object sender, LocationUpdatedEventArgs e)
+        {
+            CLLocation location = e.Location;
+
+            Console.WriteLine("Altitude: " + location.Altitude + " meters");
+            Console.WriteLine("Longitude: " + location.Coordinate.Longitude);
+            Console.WriteLine("Latitude: " + location.Coordinate.Latitude);
+            Console.WriteLine("Course: " + location.Course);
+            Console.WriteLine("Speed: " + location.Speed);
+
+        }
+
+    }
+}

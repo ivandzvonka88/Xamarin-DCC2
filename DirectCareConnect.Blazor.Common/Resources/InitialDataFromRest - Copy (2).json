@@ -1,0 +1,1484 @@
+{
+  "timeZone": "US Mountain Standard Time",
+  "companies": [
+    {
+      "name": "Development Company",
+      "coId": "32",
+      "providerId": 848,
+      "clients": [
+        {
+          "clientId": 1191,
+          "clientFirstName": "Noah",
+          "clientLastName": "Adame",
+          "services": [
+            {
+              "serviceId": 2,
+              "clientServiceId": 993,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Habilitation",
+              "shortName": "HAH",
+              "authorizations": [
+                {
+                  "startDt": "10/1/2019",
+                  "endDt": "9/30/2020",
+                  "remainingHours": 201.00,
+                  "weeklyHours": 22.3,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "HAHNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "HAHNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "Noah Adame",
+                "clientId": 1191,
+                "clientServiceId": 993,
+                "serviceId": 2,
+                "providerId": 848,
+                "dt": null,
+                "svc": "HAH",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": [
+                  {
+                    "er": {
+                      "msg": "",
+                      "code": 0
+                    },
+                    "objectiveId": 11,
+                    "longTermVision": "Live Outcome: Noah will become a master chef rivaled by none",
+                    "longTermGoal": "Noah will independently complete his scheduled chores without reminders.",
+                    "goalAreaId": 0,
+                    "goalAreaName": null,
+                    "objectiveStatus": null,
+                    "completedDt": null,
+                    "changes": null,
+                    "shortTermGoals": [
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 5,
+                        "step": 0,
+                        "shortTermGoal": "Staff will assist Noah in picking 4 chores to",
+                        "teachingMethod": "Staff will assist Noah picking 4 chores with verbal prompts to create his monthly chore list with verbal prompts, as needed.",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 7,
+                        "step": 0,
+                        "shortTermGoal": "With assistance as needed, Noah will complete",
+                        "teachingMethod": "\r\nStaff will assist Noah completing his weekly chore as independently as possible.",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      }
+                    ]
+                  },
+                  {
+                    "er": {
+                      "msg": "",
+                      "code": 0
+                    },
+                    "objectiveId": 12,
+                    "longTermVision": "Live Outcome: Noah will become a master chef rivaled by none",
+                    "longTermGoal": "Noah will independently cook a meal",
+                    "goalAreaId": 0,
+                    "goalAreaName": null,
+                    "objectiveStatus": null,
+                    "completedDt": null,
+                    "changes": null,
+                    "shortTermGoals": [
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 9,
+                        "step": 0,
+                        "shortTermGoal": "Staff will assist noah picking recipes and familiarizing him with the ingredients",
+                        "teachingMethod": "Staff will assist Noah in identifying ingredients",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 10,
+                        "step": 0,
+                        "shortTermGoal": "Noah will boil eggs, and create an egg salad",
+                        "teachingMethod": "Staff will assist Noah  to make an egg salad as  independantly as possible.",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      }
+                    ]
+                  }
+                ],
+                "scoring": [
+                  {
+                    "value": "I",
+                    "name": "Independent"
+                  },
+                  {
+                    "value": "V",
+                    "name": "Verbal Prompt"
+                  },
+                  {
+                    "value": "M",
+                    "name": "Modeling"
+                  },
+                  {
+                    "value": "G",
+                    "name": "Gesture"
+                  },
+                  {
+                    "value": "C",
+                    "name": "Chaining"
+                  },
+                  {
+                    "value": "HOH",
+                    "name": "Hand-Over-Hand"
+                  },
+                  {
+                    "value": "R",
+                    "name": "Refused"
+                  },
+                  {
+                    "value": "B",
+                    "name": "Barrier"
+                  }
+                ],
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            }
+          ],
+          "locations": null
+        },
+        {
+          "clientId": 41,
+          "clientFirstName": "AVARIELLA",
+          "clientLastName": "APODACA",
+          "services": [
+            {
+              "serviceId": 3,
+              "clientServiceId": 19,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Respite",
+              "shortName": "RSP",
+              "authorizations": [
+                {
+                  "startDt": "5/17/2020",
+                  "endDt": "9/30/2020",
+                  "remainingHours": 220.00,
+                  "weeklyHours": 24.4,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "RSPNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "RSPNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "AVARIELLA APODACA",
+                "clientId": 41,
+                "clientServiceId": 19,
+                "serviceId": 3,
+                "providerId": 848,
+                "dt": null,
+                "svc": "RSP",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": null,
+                "scoring": null,
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            }
+          ],
+          "locations": null
+        },
+        {
+          "clientId": 3900,
+          "clientFirstName": "VICTOR",
+          "clientLastName": "Gorri",
+          "services": [
+            {
+              "serviceId": 1,
+              "clientServiceId": 8925,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Attendant Care",
+              "shortName": "ATC",
+              "authorizations": [
+                {
+                  "startDt": "5/1/2020",
+                  "endDt": "3/1/2021",
+                  "remainingHours": 800.00,
+                  "weeklyHours": 26.0,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "ATCNote",
+              "clientNote": null
+            },
+            {
+              "serviceId": 2,
+              "clientServiceId": 8926,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Habilitation",
+              "shortName": "HAH",
+              "authorizations": [
+                {
+                  "startDt": "5/1/2020",
+                  "endDt": "2/4/2021",
+                  "remainingHours": 1000.00,
+                  "weeklyHours": 36.8,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "HAHNote",
+              "clientNote": null
+            },
+            {
+              "serviceId": 3,
+              "clientServiceId": 8927,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Respite",
+              "shortName": "RSP",
+              "authorizations": [
+                {
+                  "startDt": "5/1/2020",
+                  "endDt": "12/31/2020",
+                  "remainingHours": 1000.00,
+                  "weeklyHours": 45.2,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "RSPNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "RSPNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "VICTOR Gorri",
+                "clientId": 3900,
+                "clientServiceId": 8927,
+                "serviceId": 3,
+                "providerId": 848,
+                "dt": null,
+                "svc": "RSP",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": null,
+                "scoring": null,
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            }
+          ],
+          "locations": [
+            {
+              "clientLocationId": 48,
+              "locationTypeId": 1,
+              "address": "9 Manito Avenue",
+              "city": "Lake Hiawatha",
+              "state": "NJ",
+              "zip": "07034",
+              "lat": 40.8703384,
+              "lon": -74.3694575,
+              "radius": 500
+            },
+            {
+              "clientLocationId": 49,
+              "locationTypeId": 1,
+              "address": "209 Willow Avenue",
+              "city": "Hoboken",
+              "state": "NJ",
+              "zip": "07030",
+              "lat": 40.7397057,
+              "lon": -74.0340237,
+              "radius": 500
+            }
+          ]
+        },
+        {
+          "clientId": 1475,
+          "clientFirstName": "ABRIL",
+          "clientLastName": "RAMOS",
+          "services": [
+            {
+              "serviceId": 2,
+              "clientServiceId": 920,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Habilitation",
+              "shortName": "HAH",
+              "authorizations": [
+                {
+                  "startDt": "10/25/2019",
+                  "endDt": "10/24/2020",
+                  "remainingHours": 207.00,
+                  "weeklyHours": 16.7,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "HAHNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "HAHNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "ABRIL RAMOS",
+                "clientId": 1475,
+                "clientServiceId": 920,
+                "serviceId": 2,
+                "providerId": 848,
+                "dt": null,
+                "svc": "HAH",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": [
+                  {
+                    "er": {
+                      "msg": "",
+                      "code": 0
+                    },
+                    "objectiveId": 2,
+                    "longTermVision": "Live Outcome: Barry will build on his household skills as\nevidenced by him completing his chore schedule w/out\nreminders.",
+                    "longTermGoal": "Barry will independently complete his scheduled chores without reminders.",
+                    "goalAreaId": 0,
+                    "goalAreaName": null,
+                    "objectiveStatus": null,
+                    "completedDt": null,
+                    "changes": null,
+                    "shortTermGoals": [
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 1,
+                        "step": 0,
+                        "shortTermGoal": "Objective A Goal 1",
+                        "teachingMethod": "Objective A Teaching Method 1",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 2,
+                        "step": 0,
+                        "shortTermGoal": "Objective A Goal 2",
+                        "teachingMethod": "Objective A Teaching Method 2",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 26,
+                        "step": 0,
+                        "shortTermGoal": "aaaaaaaaaaaaaa",
+                        "teachingMethod": "bbbbbbbbbbbbbbbbbbb",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      }
+                    ]
+                  },
+                  {
+                    "er": {
+                      "msg": "",
+                      "code": 0
+                    },
+                    "objectiveId": 9,
+                    "longTermVision": "Live Outcome: Barry will become a master chef rivaled by none",
+                    "longTermGoal": "Barry will independently cook a meal",
+                    "goalAreaId": 0,
+                    "goalAreaName": null,
+                    "objectiveStatus": null,
+                    "completedDt": null,
+                    "changes": null,
+                    "shortTermGoals": [
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 3,
+                        "step": 0,
+                        "shortTermGoal": "Objective B Goal 1",
+                        "teachingMethod": "Objective B Teaching Method 1",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 4,
+                        "step": 0,
+                        "shortTermGoal": "Objective B Goal 2",
+                        "teachingMethod": "Objective B Teaching Method 2",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      }
+                    ]
+                  }
+                ],
+                "scoring": [
+                  {
+                    "value": "I",
+                    "name": "Independent"
+                  },
+                  {
+                    "value": "V",
+                    "name": "Verbal Prompt"
+                  },
+                  {
+                    "value": "M",
+                    "name": "Modeling"
+                  },
+                  {
+                    "value": "G",
+                    "name": "Gesture"
+                  },
+                  {
+                    "value": "C",
+                    "name": "Chaining"
+                  },
+                  {
+                    "value": "HOH",
+                    "name": "Hand-Over-Hand"
+                  },
+                  {
+                    "value": "R",
+                    "name": "Refused"
+                  },
+                  {
+                    "value": "B",
+                    "name": "Barrier"
+                  }
+                ],
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            },
+            {
+              "serviceId": 3,
+              "clientServiceId": 921,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Respite",
+              "shortName": "RSP",
+              "authorizations": [
+                {
+                  "startDt": "10/25/2019",
+                  "endDt": "9/30/2020",
+                  "remainingHours": 209.00,
+                  "weeklyHours": 23.2,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "RSPNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "RSPNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "ABRIL RAMOS",
+                "clientId": 1475,
+                "clientServiceId": 921,
+                "serviceId": 3,
+                "providerId": 848,
+                "dt": null,
+                "svc": "RSP",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": null,
+                "scoring": null,
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            }
+          ],
+          "locations": [
+            {
+              "clientLocationId": 3,
+              "locationTypeId": 1,
+              "address": "3706 W Glacier Ct",
+              "city": "Phoenix",
+              "state": "AZ",
+              "zip": "85086",
+              "lat": 33.8751385,
+              "lon": -112.1391326,
+              "radius": 40
+            },
+            {
+              "clientLocationId": 7,
+              "locationTypeId": 1,
+              "address": "42910 N Outer Bank Ct",
+              "city": "Anthem",
+              "state": "AZ",
+              "zip": "85086",
+              "lat": 33.8740806,
+              "lon": -112.1436502,
+              "radius": 50
+            },
+            {
+              "clientLocationId": 13,
+              "locationTypeId": 4,
+              "address": "191 E Benrich Ct",
+              "city": "Gilbert",
+              "state": "AZ",
+              "zip": "85295",
+              "lat": 33.2946905,
+              "lon": -111.7854009,
+              "radius": 50
+            }
+          ]
+        },
+        {
+          "clientId": 1500,
+          "clientFirstName": "ABIGAIL",
+          "clientLastName": "TOURNAS",
+          "services": [
+            {
+              "serviceId": 2,
+              "clientServiceId": 977,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Habilitation",
+              "shortName": "HAH",
+              "authorizations": [
+                {
+                  "startDt": "8/28/2019",
+                  "endDt": "8/27/2020",
+                  "remainingHours": 133.75,
+                  "weeklyHours": 32.3,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "HAHNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "HAHNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "ABIGAIL TOURNAS",
+                "clientId": 1500,
+                "clientServiceId": 977,
+                "serviceId": 2,
+                "providerId": 848,
+                "dt": null,
+                "svc": "HAH",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": [
+                  {
+                    "er": {
+                      "msg": "",
+                      "code": 0
+                    },
+                    "objectiveId": 16,
+                    "longTermVision": "Live Outcome: Noah will become a master chef rivaled by none",
+                    "longTermGoal": "Carol will independently complete his scheduled chores without reminders.",
+                    "goalAreaId": 0,
+                    "goalAreaName": null,
+                    "objectiveStatus": null,
+                    "completedDt": null,
+                    "changes": null,
+                    "shortTermGoals": [
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 11,
+                        "step": 0,
+                        "shortTermGoal": "Staff will assist Carol in picking 4 chores to",
+                        "teachingMethod": "Staff will assist Carol picking 4 chores with verbal prompts to create her monthly chore list with verbal prompts, as needed.",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      },
+                      {
+                        "er": {
+                          "msg": "",
+                          "code": 0
+                        },
+                        "goalId": 12,
+                        "step": 0,
+                        "shortTermGoal": "With assistance as needed, Carol will complete",
+                        "teachingMethod": "\r\nStaff will assist Carol completing his weekly chore as independently as possible.",
+                        "goalStatus": null,
+                        "frequencyId": null,
+                        "frequency": null,
+                        "progress": null,
+                        "score": "",
+                        "trialPct": null,
+                        "completedDt": null,
+                        "recommendation": null,
+                        "therapyScores": null
+                      }
+                    ]
+                  }
+                ],
+                "scoring": [
+                  {
+                    "value": "I",
+                    "name": "Independent"
+                  },
+                  {
+                    "value": "V",
+                    "name": "Verbal Prompt"
+                  },
+                  {
+                    "value": "M",
+                    "name": "Modeling"
+                  },
+                  {
+                    "value": "G",
+                    "name": "Gesture"
+                  },
+                  {
+                    "value": "C",
+                    "name": "Chaining"
+                  },
+                  {
+                    "value": "HOH",
+                    "name": "Hand-Over-Hand"
+                  },
+                  {
+                    "value": "R",
+                    "name": "Refused"
+                  },
+                  {
+                    "value": "B",
+                    "name": "Barrier"
+                  }
+                ],
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            },
+            {
+              "serviceId": 3,
+              "clientServiceId": 978,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Respite",
+              "shortName": "RSP",
+              "authorizations": [
+                {
+                  "startDt": "10/1/2019",
+                  "endDt": "8/27/2020",
+                  "remainingHours": 5.25,
+                  "weeklyHours": 1.3,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "RSPNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "RSPNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "ABIGAIL TOURNAS",
+                "clientId": 1500,
+                "clientServiceId": 978,
+                "serviceId": 3,
+                "providerId": 848,
+                "dt": null,
+                "svc": "RSP",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": null,
+                "scoring": null,
+                "careAreas": null,
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            },
+            {
+              "serviceId": 1,
+              "clientServiceId": 979,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Attendant Care",
+              "shortName": "ATC",
+              "authorizations": [
+                {
+                  "startDt": "8/28/2019",
+                  "endDt": "8/27/2020",
+                  "remainingHours": 1070.50,
+                  "weeklyHours": 258.4,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "ATCNote",
+              "clientNote": {
+                "er": {
+                  "msg": "",
+                  "code": 0
+                },
+                "coId": "32",
+                "docType": "ATCNote",
+                "docId": 0,
+                "startUTC": null,
+                "signee": null,
+                "signeeCredentials": null,
+                "verification": false,
+                "clientName": "ABIGAIL TOURNAS",
+                "clientId": 1500,
+                "clientServiceId": 979,
+                "serviceId": 1,
+                "providerId": 848,
+                "dt": null,
+                "svc": "ATC",
+                "note": "",
+                "hasAttachment": false,
+                "attachmentName": "",
+                "extension": "",
+                "longTermObjectives": null,
+                "scoring": [
+                  {
+                    "value": "+",
+                    "name": "Independent"
+                  },
+                  {
+                    "value": "-",
+                    "name": "Provider Assisted"
+                  }
+                ],
+                "careAreas": [
+                  {
+                    "careId": 5,
+                    "clsvId": 0,
+                    "serviceId": 0,
+                    "clsvidId": 0,
+                    "careArea": "Laundry",
+                    "score": "",
+                    "lastDate": null
+                  },
+                  {
+                    "careId": 6,
+                    "clsvId": 0,
+                    "serviceId": 0,
+                    "clsvidId": 0,
+                    "careArea": "Cleaning",
+                    "score": "",
+                    "lastDate": null
+                  },
+                  {
+                    "careId": 7,
+                    "clsvId": 0,
+                    "serviceId": 0,
+                    "clsvidId": 0,
+                    "careArea": "Tidying Up",
+                    "score": "",
+                    "lastDate": null
+                  },
+                  {
+                    "careId": 8,
+                    "clsvId": 0,
+                    "serviceId": 0,
+                    "clsvidId": 0,
+                    "careArea": "Washing Up",
+                    "score": "",
+                    "lastDate": null
+                  }
+                ],
+                "noShow": false,
+                "teletherapy": false,
+                "supervisorPresent": false
+              }
+            }
+          ],
+          "locations": [
+            {
+              "clientLocationId": 5,
+              "locationTypeId": 1,
+              "address": "3454 W Inspiration Dr",
+              "city": "Phoenix",
+              "state": "AZ",
+              "zip": "85086",
+              "lat": 33.8703122,
+              "lon": -112.1337300,
+              "radius": 50
+            },
+            {
+              "clientLocationId": 7,
+              "locationTypeId": 1,
+              "address": "42910 N Outer Bank Ct",
+              "city": "Anthem",
+              "state": "AZ",
+              "zip": "85086",
+              "lat": 33.8740806,
+              "lon": -112.1436502,
+              "radius": 50
+            }
+          ]
+        }
+      ],
+      "clientAlerts": [
+        {
+          "priority": 1,
+          "alert": "Noah Adame Habilitation next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Medicaid ID Missing",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Occ. Therapy next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Spch. Therapy next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "AVARIELLA APODACA Habilitation next progress report date requires initialization",
+          "clientId": 41,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "AVARIELLA APODACA Medicaid ID Missing",
+          "clientId": 41,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Attendant Care next progress report date requires initialization",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Expiring ATC authorization 10/30/2019",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Expiring RSP authorization 01/31/2020",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Medicaid ID Missing",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Attendant Care next progress report date requires initialization",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Habilitation next progress report date requires initialization",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Medicaid ID Missing",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABRIL RAMOS Expiring ATC authorization 07/01/2020",
+          "clientId": 1475,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Attendant Care next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Habilitation next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Medicaid ID Missing",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Occ. Therapy next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        }
+      ],
+      "credentials": [
+        {
+          "coId": "32",
+          "providerId": 1343,
+          "credId": 0,
+          "credTypeId": 14,
+          "credName": "Letter Of Reference 2",
+          "docId": "",
+          "validFrom": "",
+          "validTo": "",
+          "status": "Missing"
+        }
+      ],
+      "messagingContacts": [
+        {
+          "contactId": 847,
+          "contactName": "Susan McSupervisor",
+          "contactRole": "Direct Supervisor"
+        }
+      ],
+      "pendingDocumentation": [
+        {
+          "docId": 29,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/3/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 36,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/26/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 37,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/27/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 15,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/1/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 16,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/2/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 17,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/3/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 18,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/8/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 20,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/10/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 21,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/17/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 22,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/18/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 23,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/19/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 24,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/26/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 25,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/27/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 26,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/27/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 8,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/10/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 14,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/31/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 32,
+          "docType": "HabReport",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": true,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "5/5/2020",
+          "svc": "Habilitation",
+          "noteType": "Progress Report",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 2,
+          "docType": "HabReport",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/5/2019",
+          "svc": "Habilitation",
+          "noteType": "Progress Report",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 41,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/13/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 42,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/14/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 43,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/15/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        }
+      ]
+    }
+  ]
+}

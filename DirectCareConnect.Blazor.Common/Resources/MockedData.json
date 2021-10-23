@@ -1,0 +1,28 @@
+{
+  "Users": [
+    {
+      "FirstName": "Victor",
+      "LastName": "Gorri",
+      "Email": "victor@ibeanzinc.com"
+    },
+    {
+      "FirstName": "Victor",
+      "LastName": "Gorri",
+      "Email": "vicjg@yahoo.com"
+    },
+    {
+      "FirstName": "Victor",
+      "LastName": "Gorri",
+      "Email": "victor@mailcws.com"
+    },
+    {
+      "FirstName": "Provider",
+      "LastName": "One",
+      "Email": "provider@thpl.com",
+      "Password": "Abc123"
+    }
+  ],
+  "LocationsInGeoFence": [
+    48
+  ]
+}

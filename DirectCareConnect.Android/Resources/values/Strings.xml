@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Direct Card Connect</string>
+  <string name="ok">OK</string>
+  <string name="notification_text">This app is running in the background</string>
+  <string name="permission_location_rationale">This app requires access to the device location in order to work.</string>
+</resources>

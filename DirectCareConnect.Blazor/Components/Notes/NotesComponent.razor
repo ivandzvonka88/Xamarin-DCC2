@@ -1,0 +1,16 @@
+﻿@inherits DirectCareConnect.Blazor.Components.Notes.NotesComponentBase
+
+<h2>Session Notes:</h2>
+<textarea style="width:100%" @bind="@EndSessionModel.Note" @onkeyup="@InputReceived"></textarea>
+
+<h2>Attachment Name:</h2>
+<div class="form-group">
+    <input id="rspAttachment" class="form-control form-control-sm fileName" disabled="" style="margin-top:6px">
+</div>
+<div class="form-group">
+    <button class="btn btn-primary" @onclick="AttachFile">Attach File</button>
+</div>
+<div class="form-group">
+    File Name: @EndSessionModel.FileName
+</div>
+

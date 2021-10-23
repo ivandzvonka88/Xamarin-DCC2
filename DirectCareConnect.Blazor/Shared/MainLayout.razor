@@ -1,0 +1,15 @@
+@inherits LayoutComponentBase
+@using DirectCareConnect.Blazor.Components
+@using DirectCareConnect.Blazor.Components.LoadingOverlay
+@using Blazored.Toast
+@using Blazored.Toast.Services
+
+<Modal />
+
+@Body
+<LoadingOverlay></LoadingOverlay>
+<BlazoredToasts SuccessIcon="fa fa-thumbs-up"
+                ErrorIcon="fa fa-bug"
+                IconType="IconType.FontAwesome"
+                Position="Blazored.Toast.Configuration.ToastPosition.BottomCenter"
+                Timeout="1" />

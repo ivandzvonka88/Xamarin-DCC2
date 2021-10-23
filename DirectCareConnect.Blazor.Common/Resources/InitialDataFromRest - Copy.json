@@ -1,0 +1,568 @@
+{
+  "timeZone": "US Mountain Standard Time",
+  "companies": [
+    {
+      "name": "Development Company",
+      "coId": "32",
+      "providerId": 848,
+      "clients": [
+      
+        {
+          "clientId": 3900,
+          "clientFirstName": "VICTOR",
+          "clientLastName": "Gorri",
+          "services": [
+            {
+              "serviceId": 1,
+              "clientServiceId": 8925,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Attendant Care",
+              "shortName": "ATC",
+              "authorizations": [
+                {
+                  "startDt": "5/1/2020",
+                  "endDt": "3/1/2021",
+                  "remainingHours": 800.00,
+                  "weeklyHours": 26.0,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "ATCNote",
+              "clientNote": null
+            },
+            {
+              "serviceId": 2,
+              "clientServiceId": 8926,
+              "isTherapy": false,
+              "isEvaluation": false,
+              "isHCBS": true,
+              "name": "Respite",
+              "shortName": "RSP",
+              "authorizations": [
+                {
+                  "startDt": "5/1/2020",
+                  "endDt": "3/1/2021",
+                  "remainingHours": 800.00,
+                  "weeklyHours": 26.0,
+                  "remainingDailyHours": 10.0
+                }
+              ],
+              "noteType": "ATCNote",
+              "clientNote": null
+            }
+          ],
+          "locations": [
+            {
+              "clientLocationId": 48,
+              "locationTypeId": 1,
+              "address": "9 Manito Avenue",
+              "city": "Lake Hiawatha",
+              "state": "NJ",
+              "zip": "07034",
+              "lat": 40.8703384,
+              "lon": -74.3694575,
+              "radius": 500
+            },
+            {
+              "clientLocationId": 49,
+              "locationTypeId": 1,
+              "address": "209 Willow Avenue",
+              "city": "Hoboken",
+              "state": "NJ",
+              "zip": "07030",
+              "lat": 40.7397057,
+              "lon": -74.0340237,
+              "radius": 500
+            }
+          ]
+        }
+       
+      ],
+      "clientAlerts": [
+        {
+          "priority": 1,
+          "alert": "Noah Adame Habilitation next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Medicaid ID Missing",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Occ. Therapy next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "Noah Adame Spch. Therapy next progress report date requires initialization",
+          "clientId": 1191,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "AVARIELLA APODACA Habilitation next progress report date requires initialization",
+          "clientId": 41,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "AVARIELLA APODACA Medicaid ID Missing",
+          "clientId": 41,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Attendant Care next progress report date requires initialization",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Expiring ATC authorization 10/30/2019",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Expiring RSP authorization 01/31/2020",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ARNOLD ARNSHAW Medicaid ID Missing",
+          "clientId": 1607,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Attendant Care next progress report date requires initialization",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Habilitation next progress report date requires initialization",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "VICTOR Gorri Medicaid ID Missing",
+          "clientId": 3900,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABRIL RAMOS Expiring ATC authorization 07/01/2020",
+          "clientId": 1475,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Attendant Care next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Habilitation next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Medicaid ID Missing",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        },
+        {
+          "priority": 1,
+          "alert": "ABIGAIL TOURNAS Occ. Therapy next progress report date requires initialization",
+          "clientId": 1500,
+          "clwEm": null,
+          "clwNm": null,
+          "clwPh": null
+        }
+      ],
+      "credentials": [
+        {
+          "coId": "32",
+          "providerId": 1343,
+          "credId": 0,
+          "credTypeId": 14,
+          "credName": "Letter Of Reference 2",
+          "docId": "",
+          "validFrom": "",
+          "validTo": "",
+          "status": "Missing"
+        }
+      ],
+      "messagingContacts": [
+        {
+          "contactId": 847,
+          "contactName": "Susan McSupervisor",
+          "contactRole": "Direct Supervisor"
+        }
+      ],
+      "pendingDocumentation": [
+        {
+          "docId": 29,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/3/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 36,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/26/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 37,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "1/27/2020",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 15,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/1/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 16,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/2/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 17,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/3/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 18,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/8/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 20,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/10/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 21,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/17/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 22,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/18/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 23,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/19/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 24,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/26/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 25,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/27/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 26,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "11/27/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 8,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/10/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 14,
+          "docType": "HAHServiceNote",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/31/2019",
+          "svc": "Habilitation",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 32,
+          "docType": "HabReport",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": true,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "5/5/2020",
+          "svc": "Habilitation",
+          "noteType": "Progress Report",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 2,
+          "docType": "HabReport",
+          "serviceId": 2,
+          "clientServiceId": 920,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/5/2019",
+          "svc": "Habilitation",
+          "noteType": "Progress Report",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 41,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/13/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 42,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/14/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        },
+        {
+          "docId": 43,
+          "docType": "ATCServiceNote",
+          "serviceId": 1,
+          "clientServiceId": 936,
+          "clientId": 1475,
+          "completed": false,
+          "approved": false,
+          "lostSession": false,
+          "clientName": "ABRIL RAMOS",
+          "dueDt": "12/15/2019",
+          "svc": "Attendant Care",
+          "noteType": "Session Note",
+          "status": "Incomplete"
+        }
+      ]
+    }
+  ]
+}

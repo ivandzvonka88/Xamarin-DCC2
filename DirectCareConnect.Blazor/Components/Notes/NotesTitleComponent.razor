@@ -1,0 +1,19 @@
+﻿@inherits DirectCareConnect.Blazor.Components.Notes.NotesTitleComponentBase
+
+<h2>Pending session documentation for:</h2>
+<div class="input-form-row-1col" style="">
+    <div id="noteModalRSPTitle">@EndSessionModel.ClientName</div>
+
+</div>
+<div class="input-form-row-1col" style="border-bottom: 1px solid #fff">
+    <div>Date: @FormattedDate</div>
+    <div>Doc Id: @EndSessionModel.RemoteDocId / @EndSessionModel.DocId </div>
+</div>
+@*<div class="input-form-row-2col" style="display: grid; grid-template-columns:  1fr  1fr; border-top: 1px solid #fff;">
+    <div>Start:</div>
+    <div>End:</div>
+</div>
+<div class="input-form-row-1col" style="display: grid; grid-template-columns: 1fr; border-top: 1px solid #fff;">
+    <div>Task:</div>
+
+</div>*@

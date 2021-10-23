@@ -1,0 +1,22 @@
+﻿@inherits DirectCareConnect.Blazor.Components.ModalBase
+
+<div class="bm-container @(IsVisible ? "bm-active" : string.Empty)">
+
+    <div class="bm-overlay"></div>
+
+    <div class="blazor-modal">
+
+        @if (Title != null && Title != String.Empty)
+        {
+            <div class="bm-header">
+                <h3 class="bm-title">@Title</h3>
+            </div>
+        }
+
+
+        <div class="bm-content">
+            @Content
+        </div>
+    </div>
+
+</div>

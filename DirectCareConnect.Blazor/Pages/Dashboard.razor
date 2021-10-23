@@ -1,0 +1,202 @@
+﻿@inherits DashboardBase
+@page "/dashboard"
+@using DirectCareConnect.Blazor.Components.Buttons
+
+<header>
+
+    <h1 class="text-center"><span>Therapy</span>Corner</h1>
+    @if (Model.ShowHeader)
+    {
+<nav class="header d-flex justify-content-around align-content-center py-1">
+
+    <img src="/images/icon-home.png" />
+    <a href="/calendar">
+        <img src="/images/icon-calendar.png" />
+
+    </a>
+    <img src="/images/icon-contacts.png" />
+    <img src="/images/icon-search-circle.png" />
+    <img src="/images/icon-chatbubbles.png" />
+    <button class="btn btn-link" role="button" @onclick="Logout">
+        <img src="/images/icon-signout.png" />
+    </button>
+</nav>
+    }
+
+</header>
+<main>
+    @if (Model.ShowDashboard)
+    {
+        <div class="p-2">
+            <h2>Dashboard</h2>
+            <button class="btn btn-primary btn-square btn-noborder d-flex mb-2" @onclick="ShowClientAlerts" role="button">
+                Client Alerts  
+                <img src="/images/icon-plus-square.png" />
+            </button>
+            <button class="btn btn-primary btn-square btn-noborder d-flex mb-2" role="button" @onclick="ShowDocumentation">
+                Pending Documentation    <img src="/images/icon-plus-square.png" />
+            </button>
+            <button class="btn btn-primary btn-square btn-noborder d-flex" role="button" @onclick="ShowCredentials">
+                Credentials &amp; Certifications    <img src="/images/icon-plus-square.png" />
+            </button>
+        </div>
+    }
+    @if (Model != null && Model.ClientAlerts != null && Model.ShowClientAlerts)
+    {
+
+
+        @*<div class="table">
+                @foreach (var alert in Model.ClientAlerts)
+                {
+                    <div class="table-row">
+                        <div class="table-cell"><span class="mr-2 alert-icon red"></span></div>
+
+                        <div class="table-cell">@alert.Alert</div>
+
+                        <div class="table-cell d-flex ml-auto">
+                            <img class="" src="/images/eye.png" />
+                            <img class="" src="/images/chat.png" />
+                        </div>
+                    </div>
+                }
+            </div>*@
+
+        <div class="panel panel-secondary">
+
+            <GoBackComponent HeaderText="Client Alerts" OnGoBack="ResetView"></GoBackComponent>
+
+            <div class="panel-body ">
+                <ul class="client-alert-listings">
+                    @foreach (var alert in Model.ClientAlerts)
+                    {
+                        <li>@alert.Alert</li>
+                    }
+                </ul>
+
+            </div>
+        </div>
+
+    }
+
+
+    @if (Model != null && Model.Credentials != null && Model.ShowCredentials)
+    {
+
+        @*<div class="container-fluid">
+                <div class="creds">
+                    <h2>Credentials/Certifications</h2>
+                    <div class="table">
+                        @foreach (var credential in Model.Credentials)
+                        {
+                            <div class="table-row">
+                                <div class="table-cell"><span class="mr-2 alert-icon red"></span></div>
+
+                                <div class="table-cell">@credential.CredName</div>
+
+                                <div class="table-cell d-flex ml-auto">
+                                    <a href="/uploadCredential?credId=@(credential.CredentialId)">
+                                        <img class="" src="/images/eye.png" />
+                                    </a>
+                                        <img class="" src="/images/chat.png" />
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>*@
+
+        <div class="panel panel-secondary">
+            <GoBackComponent HeaderText="Credentials & Certifications" OnGoBack="ResetView"></GoBackComponent>
+
+            <div class="panel-body ">
+                <ul class="client-alert-listings">
+                    @foreach (var credential in Model.Credentials)
+                    {
+
+                        <li>
+                            <a href="/addcredential/@(credential.ProviderId)/@(credential.CredTypeId)">@credential.CredName</a>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+        </div>
+    }
+
+    @if (Model != null && Model.PendingDocumentations != null && Model.ShowDocumentation)
+    {
+        @*
+            <div class="container-fluid">
+
+                    <div class="alerts">
+                        <h2>Pending Documentation</h2>
+                        <div class="table">
+                            @foreach (var alert in Model.PendingDocumentations)
+                            {
+                                <div class="table-row">
+                                    <div class="table-cell"><span class="mr-2 alert-icon red"></span></div>
+
+                                    <div class="table-cell">@alert.Alert</div>
+
+                                    <div class="table-cell d-flex ml-auto">
+                                        <a href="/endsession@(alert.Svc.ToLower())/@(alert.ClientId)/@(alert.ClientServiceId)/@(alert.DocumentId)">
+                                            <img class="" src="/images/eye.png" />
+                                        </a>
+                                        <img class="" src="/images/chat.png" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+            </div>*@
+
+        <div class="panel panel-secondary">
+            <GoBackComponent HeaderText="Pending Documentation" OnGoBack="ResetView"></GoBackComponent>
+
+            <div class="panel-body ">
+                <ul class="client-alert-listings">
+                    @foreach (var alert in Model.PendingDocumentations)
+                    {
+                        <li>
+                            <a href="/endsession@(alert.Svc.ToLower())/@(alert.ClientId)/@(alert.ClientServiceId)/@(alert.DocumentId)/@(alert.InternalDocumentId)">@alert.Alert</a>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+        </div>
+    }
+</main>
+<footer class="footer p-3">
+
+    <div class="d-flex justify-content-around align-items-center">
+
+        @if (SessionTime == String.Empty)
+        {
+            <SpinningButton ButtonType="button" ButtonClass="btn btn-primary" Loading="@(this.IsLoading(nameof(StartSession)))" ButtonText="Start Session" OnClick="StartSession"></SpinningButton>
+        }
+        else
+        {
+            <SpinningButton ButtonType="button" ButtonClass="btn btn-primary" Loading="@(this.IsLoading(nameof(EndSession)))" ButtonText="End Session" OnClick="EndSession"></SpinningButton>
+        }
+
+        <button class="btn btn-primary" type="button" @onclick="StartSession">New Client</button>
+        <SpinningButton ButtonType="button" ButtonClass="btn btn-primary" Loading="@(this.IsLoading(nameof(Test)))" ButtonText="Refresh" OnClick="Test"></SpinningButton>
+        @*<SpinningButton ButtonType="button" ButtonClass="btn btn-primary" Loading="@(this.IsLoading(nameof(Logout)))" ButtonText="Logout" OnClick="Logout"></SpinningButton>*@
+    </div>
+
+
+    @if (SessionTime != String.Empty)
+    {
+        <div class="session-footer">
+            <div class="d-flex flex-row justify-content-between">
+                <div class="d-grid"><span class="session-type">Session Time</span> <span class="session-time">@SessionTime</span></div>
+                <div class="d-grid"><span class="session-type">Weekly Avg. Allowed</span> <span class="session-time">@WeeklyAverage</span></div>
+            </div>
+
+        </div>
+    }
+
+
+</footer>

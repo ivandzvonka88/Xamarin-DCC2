@@ -1,0 +1,76 @@
+﻿@inherits DirectCareConnect.Blazor.Components.EndServiceBase
+
+<h3>End Service</h3>
+
+@if (Model == null || Model.AvailableServices == null || Model.AvailalbleClients == null)
+{
+    <div class="alert-danger text-center">Something went wrong.</div>
+    return;
+}
+
+
+@if (Model.AvailalbleClients.Count == 1 && Model.AvailableServices.Count == 1)
+{
+    var soleClient = Model.AvailalbleClients.First();
+    var soleService = Model.AvailableServices.First();
+    <p>@soleClient.FirstName @soleClient.LastName</p>
+    <button class="btn btn-default" @onclick="()=> EndServiceSegment(soleClient.ClientId, soleService.ServiceId, soleService.ClientServiceId)">End Session</button>
+    <button type="button" class="bm-close btn btn-primary" @onclick="@Cancel">
+        <span>Cancel</span>
+    </button>
+    return;
+}
+
+@if (Model.AvailalbleClients.Count == 1 && Model.AvailableServices.Count > 1)
+{
+    var soleClient = Model.AvailalbleClients.First();
+
+    <div>@soleClient.FirstName @soleClient.LastName</div>
+    foreach (var service in Model.AvailableSelectableClientServices)
+    {
+        <label class="checkbox-container">
+            @service.ServiceName
+            <input type="checkbox" @bind="@service.Checked" />
+            <span class="checkmark"></span>
+        </label>
+    }
+    <button @onclick="()=> EndServiceSegment()">Confirm</button>
+    <button type="button" class="bm-close btn btn-primary" @onclick="@Cancel">
+        <span>Cancel</span>
+    </button>
+    return;
+}
+
+
+
+@if (Model.AvailalbleClients != null)
+{
+    @* for some reason the json serialization duplicates the services, using this to "group" and make sure same service doesn't appear 2x*@
+    List<DirectCareConnect.Common.ComponentModel.SelectableClientServices> usedServices = new List<Common.ComponentModel.SelectableClientServices>();
+    foreach (var client in Model.AvailalbleClients)
+    {
+
+
+        @foreach (var service in Model.AvailableSelectableClientServices.Where(p => p.ClientId == client.ClientId))
+        {
+            if (!usedServices.Where(p => p.ClientId == client.ClientId && p.ServiceId == service.ServiceId).Any())
+            {
+                <div>@client.FirstName @client.LastName - @service.ServiceName</div>
+                <button class="btn btn-default" @onclick="()=> EndServiceSegment(client.ClientId, service.ServiceId, service.ClientServiceId)">End Session</button>
+                usedServices.Add(service);
+            }
+        }
+
+    }
+    <div>
+        <button type="button" class="btn btn-primary " @onclick="@Cancel">
+            <span>Cancel</span>
+        </button>
+    </div>
+    return;
+}
+
+
+<button type="button" class="btn btn-primary " @onclick="@Cancel">
+    <span>Cancel</span>
+</button>

@@ -1,0 +1,17 @@
+﻿@inherits DatabaseMemoryBase
+@page "/databasememory"
+
+
+@if (Items != null)
+{
+    foreach(var item in Items.OrderBy(p=>p.GetType()).GroupBy(p=>p.GetType()))
+    {
+        <div>@item.Key.FullName</div>
+        var items = Items.Where(p => p.GetType().Equals(item.GetType()));
+        foreach(var dbObject in items)
+        {
+            <div>@GetPrimaryKey(dbObject)</div>
+        }
+
+    }
+}

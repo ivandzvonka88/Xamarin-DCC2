@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "DirectCareConnect.Common": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
